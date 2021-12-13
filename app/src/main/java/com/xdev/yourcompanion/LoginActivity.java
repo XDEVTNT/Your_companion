@@ -99,6 +99,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         progressBar = findViewById(R.id.progressbar);
+        mAuth = FirebaseAuth.getInstance();
 
         // below line is for getting instance
         // of our FirebaseAuth.
@@ -107,7 +108,7 @@ public class LoginActivity extends AppCompatActivity {
         edtPhone = findViewById(R.id.idEdtPhoneNumber);
         edtOTP = findViewById(R.id.idEdtOtp);
         verifyOTPBtn = findViewById(R.id.idBtnVerify);
-        generateOTPBtn = findViewById(R.id.idBtnGetOtp);
+        generateOTPBtn = findViewById(R.id.generateOTPBtn);
 
         // setting onclick listener for generate OTP button.
         generateOTPBtn.setOnClickListener(new View.OnClickListener() {
@@ -187,6 +188,7 @@ public class LoginActivity extends AppCompatActivity {
                         .setCallbacks(mCallBack)         // OnVerificationStateChangedCallbacks
                         .build();
         PhoneAuthProvider.verifyPhoneNumber(options);
+        //TODO 2021-12-13 20:49:52.812 4307-4307/com.xdev.yourcompanion E/zzf: Failed to get reCAPTCHA token with error [There was an error while trying to get your package certificate hash.]- calling backend without app verification
     }
 
     private void showSnack(boolean isConnected) {

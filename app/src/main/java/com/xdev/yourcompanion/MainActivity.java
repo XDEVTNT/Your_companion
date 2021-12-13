@@ -19,6 +19,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.provider.Settings;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -106,6 +107,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     private BottomSheetBehavior sheetBehavior;
     private SupportMapFragment mapFragment;
     private TextView textView2;
+    private Button showmap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
