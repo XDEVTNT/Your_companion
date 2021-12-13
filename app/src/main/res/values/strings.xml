@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Your companion</string>
+    <string name="title_activity_splashscreen">Splashscreen</string>
+
+    <string name="google_maps_key">AIzaSyAOVJz9U9y8U4oGBCbPlOrW1toJFtfTvmE</string>
+
+</resources>
